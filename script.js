@@ -1,5 +1,3 @@
-// Uroki RT @ 2020/10/25
-
 document.querySelectorAll("button").forEach((E) => {
     E.onmousemove = (e) => {
         let x = e.pageX - e.target.offsetLeft;
