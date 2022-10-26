@@ -1,5 +1,5 @@
-# e21-tools
-E21 Tools è una serie di tools sviluppati interamente in HTML, CSS e Javascript per aiutarti nello sviluppo di siti web.
+# Zezima-Tools
+Zezima Tools is a set of tools developed entirely in HTML, CSS and Javascript to aid in website development.
 
 Source code<br>
 Hex To CSS: https://stackoverflow.com/a/43960991/604861<br>
