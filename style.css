@@ -105,8 +105,13 @@ button:active {
     text-align: center;
     margin-top: 50px;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 }
 
 .text-footer a {
     color: white;
+    align-self: center;
 }
