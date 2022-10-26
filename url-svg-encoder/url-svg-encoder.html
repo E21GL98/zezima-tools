@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>URL-encoder SVG by SoN</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>URL-encoder SVG by SoN</h1>
+        </header>
+
+        <main>
+            <div class="panel">
+
+                <div class="options">
+                    Citazioni esterne:
+                    <label class="options__label">
+                <input
+                  type="radio"
+                  value="single"
+                  name="quotes"
+                  class="options__input visuallyhidden"
+                >
+                <span class="options__text">Singole</span>
+              </label>
+
+                    <span class="options__middle-word">/</span>
+
+                    <label class="options__label">
+                <input
+                  type="radio"
+                  value="double"
+                  name="quotes"
+                  class="options__input visuallyhidden"
+                  checked
+                >
+                <span class="options__text">Doppie</span>
+              </label>
+                </div>
+
+
+                <dl class="about">
+                    <dt class="expander">Info</dt>
+
+                    <dd class="expanded hidden">
+                        URL encoder SVG By SoN v0.1
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="containers">
+                <div class="container container--left container container--init">
+                    <h4>Inserisci codice SVG:</h4>
+
+                    <button class="button-example">Esempio:</button>
+
+                    <textarea name="init" id="init" spellcheck="false"></textarea>
+                </div>
+
+                <div class="container container--right container container--result">
+                    <h4>Codificato:</h4>
+
+                    <button id="copy-result-button" title="Copy encoded results to clipboard" class="copy-button">Copia</button>
+
+                    <textarea name="result" id="result" spellcheck="false"></textarea>
+
+                    <div class="tip">Puoi inserire SVG codificato qui per decodificarlo di nuovo.</div>
+                </div>
+            </div>
+
+            <div class="containers">
+                <div class="container container--left container container--result-css">
+                    <h4>Pronto per il CSS:</h4>
+
+                    <button id="copy-css-result-button" title="Copy CSS results to clipboard" class="copy-button">Copia</button>
+
+                    <textarea name="result-css" id="result-css" spellcheck="false"></textarea>
+                </div>
+
+                <div class="container container--right container container--demo">
+                    <h4>Anteprima:</h4>
+
+                    <div class="contrast-buttons">Sfondo:
+                        <button type="button" class="contrast-button contrast-button--white" data-color="white" title="{{white}}">
+                <span class="visuallyhidden">Bianco</span>
+              </button>
+
+                        <button type="button" class="contrast-button contrast-button--silver" data-color="silver" title="{{silver}}">
+                <span class="visuallyhidden">Grigio</span>
+              </button>
+
+                        <button type="button" class="contrast-button contrast-button--black" data-color="black" title="{{black}}">
+                <span class="visuallyhidden">Nero</span>
+              </button>
+                    </div>
+
+                    <div class="demo-wrapper">
+                        <div id="demo" class="demo"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <a href="https://github.com/yoksel/url-encoder/" target="_blank">Progetto originale di Yoksel (GitHub)</a>
+            <a href="https://www.e21.it" target="_blank">www.e21.it</a>
+        </footer>
+
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

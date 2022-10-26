@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1 class="title"> HEX TO FILTER CSS by SoN</h1>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+    </style>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./query.js"></script>
+</body>
+<table>
+    <tr width="100%">
+        <td valign="top">
+            <p>L'obiettivo è quello di poter creare fogli di stile personalizzati e consentire la colorazione delle icone SVG.</p>
+            <p>Affinché questo codice funzioni bene, il colore iniziale deve essere nero. Se il tuo set di icone non è nero, puoi preporre "brightness(0) saturate(100%)" alla proprietà del filtro che prima trasformerà l'icona impostata in nero.</p>
+        </td>
+    </tr>
+    <tr valign="bottom">
+        <td width="100%">
+            <fieldset>
+                <p>
+                    <label>Target colore</label> <input class="target" type="text" placeholder="target hex" value="#00a4d6" />
+                </p>
+                <button class="execute">Calcola</button>
+            </fieldset>
+            <p>Pixel reale, colore applicato tramite CSS <code>background-color</code>:</p>
+            <div class="pixel realPixel"></div>
+
+            <p>Pixel filtrato, colore applicato tramite CSS <code>filter</code>:</p>
+            <div class="pixel filterPixel"></div>
+
+            <p class="filterDetail"></p>
+            <p class="lossDetail"></p>
+        </td>
+    </tr>
+    <tr width="100%">
+        <td valign="top">
+            <p>
+                Source code:
+                <a href="https://stackoverflow.com/a/43960991/604861" target="_blank">https://stackoverflow.com/a/43960991/604861</a>
+            </p>
+        </td>
+    </tr>
+</table>
+
+</html>
