@@ -110,3 +110,61 @@ button:active {
     color: white;
     align-self: center;
 }
+
+.icon-list {
+    display: inline-block;
+}
+
+.icon-list ul {
+    display: inline-block;
+}
+
+.icon-list ul li {
+    display: inline-block;
+}
+
+.icon-list ul li ul li {
+    display: inline-block;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.version-site {
+    color: white;
+}
+
+.version-site:before {
+    color: white;
+    font-family: "FontAwesome";
+    content: "\f05a";
+    margin-right: 7px;
+}
+
+.follow-me {
+    color: white;
+}
+
+.follow-me:before {
+    color: white;
+    font-family: "FontAwesome";
+    content: "\f16d";
+    margin-right: 7px;
+    margin-left: 20px;
+}
+
+.repo {
+    color: white;
+}
+
+.repo:before {
+    color: white;
+    font-family: "FontAwesome";
+    content: "\f09b";
+    margin-right: 7px;
+    margin-left: 20px;
+}
