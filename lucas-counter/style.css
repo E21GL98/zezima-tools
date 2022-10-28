@@ -1,8 +1,8 @@
 body {
     font-family: 'Jost';
     padding: 25px;
-    background-color: #f5f5f5;
-    color: #808080;
+    background-image: linear-gradient(60deg, #29323c 0, #485563 100%);
+    color: white;
     text-align: center;
 }
 
@@ -51,7 +51,6 @@ body {
 .col_fifth,
 .col_sixth {
     position: relative;
-    display: inline;
     display: inline-block;
     float: left;
     margin-right: 2%;
@@ -72,9 +71,10 @@ body {
 }
 
 .counter {
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 20px 0;
     border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .count-title {
@@ -124,22 +124,22 @@ footer {
 }
 
 .version-site {
-    color: #808080;
+    color: white;
 }
 
 .version-site:before {
-    color: #808080;
+    color: white;
     font-family: "FontAwesome";
     content: "\f05a";
     margin-right: 7px;
 }
 
 .follow-me {
-    color: #808080;
+    color: white;
 }
 
 .follow-me:before {
-    color: #808080;
+    color: white;
     font-family: "FontAwesome";
     content: "\f16d";
     margin-right: 7px;
@@ -147,11 +147,11 @@ footer {
 }
 
 .repo {
-    color: #808080;
+    color: white;
 }
 
 .repo:before {
-    color: #808080;
+    color: white;
     font-family: "FontAwesome";
     content: "\f09b";
     margin-right: 7px;
