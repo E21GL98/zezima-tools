@@ -48,7 +48,8 @@ body {
 .col_twothird,
 .col_fourth,
 .col_three_fourth,
-.col_fifth {
+.col_fifth,
+.col_sixth {
     position: relative;
     display: inline;
     display: inline-block;
