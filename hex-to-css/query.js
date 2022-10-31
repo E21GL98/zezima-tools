@@ -104,7 +104,7 @@ class Color {
     }
 
     hsl() {
-        // Codice sorgente https://stackoverflow.com/a/9493060/2688027
+        // Code taken from https://stackoverflow.com/a/9493060/2688027, licensed under CC BY-SA.
         const r = this.r / 255;
         const g = this.g / 255;
         const b = this.b / 255;
@@ -225,13 +225,13 @@ class Solver {
 
         function fix(value, idx) {
             let max = 100;
-            if (idx === 2 /* saturazione */ ) {
+            if (idx === 2 /* saturate */ ) {
                 max = 7500;
-            } else if (idx === 4 /* luminosità */ || idx === 5 /* contrasto */ ) {
+            } else if (idx === 4 /* brightness */ || idx === 5 /* contrast */ ) {
                 max = 200;
             }
 
-            if (idx === 3 /* rotazione-hue */ ) {
+            if (idx === 3 /* hue-rotate */ ) {
                 if (value > max) {
                     value %= max;
                 } else if (value < 0) {
@@ -247,7 +247,7 @@ class Solver {
     }
 
     loss(filters) {
-        // L'argomento percentuali.
+        // Argument is array of percentages.
         const color = this.reusedColor;
         color.set(0, 0, 0);
 
@@ -278,14 +278,15 @@ class Solver {
 }
 
 function hexToRgb(hex) {
-    // Espande il codice abbreviato (es. "03F") alla forma completa (es. "0033FF")
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, (m, r, g, b) => {
         return r + r + g + g + b + b;
     });
 
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? [
+    return result ?
+        [
             parseInt(result[1], 16),
             parseInt(result[2], 16),
             parseInt(result[3], 16),
@@ -297,7 +298,7 @@ $(document).ready(() => {
     $('button.execute').click(() => {
         const rgb = hexToRgb($('input.target').val());
         if (rgb.length !== 3) {
-            alert('Formato invalido!');
+            alert('Invalid format!');
             return;
         }
 
@@ -307,18 +308,18 @@ $(document).ready(() => {
 
         let lossMsg;
         if (result.loss < 1) {
-            lossMsg = 'Risultato perfetto.';
+            lossMsg = 'This is a perfect result.';
         } else if (result.loss < 5) {
-            lossMsg = 'È abbastanza vicino al colore originale.';
+            lossMsg = 'The is close enough.';
         } else if (result.loss < 15) {
-            lossMsg = 'Il colore è un pò spento. Prova di nuovo.';
+            lossMsg = 'The color is somewhat off. Consider running it again.';
         } else {
-            lossMsg = 'Il colore è estremamente spento. Prova di nuovo!';
+            lossMsg = 'The color is extremely off. Run it again!';
         }
 
         $('.realPixel').css('background-color', color.toString());
         $('.filterPixel').attr('style', result.filter);
         $('.filterDetail').text(result.filter);
-        $('.lossDetail').html(`Perdità colore: ${result.loss.toFixed(1)}. <b>${lossMsg}</b>`);
+        $('.lossDetail').html(`Loss: ${result.loss.toFixed(1)}. <b>${lossMsg}</b>`);
     });
 });
